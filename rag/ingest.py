@@ -9,7 +9,7 @@ from langchain.retrievers.document_compressors import FlashrankRerank
 # Injest all the documents from the web into FAISS vectorstore
 def ingest_all(documents):
     # Embed the sentences
-    embeddings = HuggingFaceEmbeddings() # OpenAIEmbeddings() alternate
+    embeddings = OpenAIEmbeddings()
     # Store the embeddings
     db = FAISS.from_documents(documents, embeddings, distance_strategy=DistanceStrategy.COSINE)
     db.save_local("rag/vectorstore/positive")
