@@ -22,7 +22,7 @@ def get_entity_retriever_prompt():
 
     return prompt
 
-def get_search_results_retriever_prompt():
+def get_search_terms_retriever_prompt():
     # Custom prompt template
     custom_prompt =f"""You will be given a list with key entities. Your task is to mix and match these entities to create relevant google search topic and return them back in a list.
     Below is an example of the input and output format:
