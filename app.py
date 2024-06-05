@@ -35,7 +35,7 @@ def app():
         rag_response = rag_pipeline_response(assistant_role_name, user_role_name, specified_task)
         # Display the RAG response
         st.markdown("## RAG Response:")
-        st.write(rag_response["content"])
+        st.write(rag_response)
 
 if __name__ == "__main__":
     app()

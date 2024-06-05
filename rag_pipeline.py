@@ -40,4 +40,4 @@ def rag_pipeline_response(assistant_role_name, user_role_name, specified_task):
     # Generate the response
     response = llm_chain.invoke({"specified_task": specified_task})
     
-    return response
+    return response.content
