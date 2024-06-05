@@ -20,10 +20,10 @@ def camel_chat(user_agent, assistant_agent, assistant_msg):
         n += 1
         user_ai_msg = user_agent.step(assistant_msg)
         user_msg = HumanMessage(content=user_ai_msg.content)
-        
+        print("User Role(Founder and CEO): ", user_msg.content)
         assistant_ai_msg = assistant_agent.step(user_msg)
         assistant_msg = HumanMessage(content=assistant_ai_msg.content)
-        
+        print("Assistant Role(Content Writer): ", assistant_msg.content)
         assistant_response.append(assistant_msg.content)
         if "<CAMEL_TASK_DONE>" in user_msg.content:
             break
